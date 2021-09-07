@@ -22,5 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("home/", include("home.urls")),
+    path('blog/', include('blog.urls')),
     path("", lambda request: redirect("/home/")),
+    path('blog/', include('blog.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
