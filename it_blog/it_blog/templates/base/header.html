@@ -1,5 +1,5 @@
- {% load static %}
-  <header class="default-header">
+{% load static %}
+<header class="default-header">
     <nav class="navbar navbar-expand-lg  navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -15,6 +15,7 @@
             <li><a href="{% url 'home_page' %}">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
+           
             <li class="dropdown">
               <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                 Pages
@@ -29,7 +30,7 @@
                 Blog
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="blog-home.html">Blog Home</a>
+                <a class="dropdown-item" href="{% url 'blogs_page' %}"3>Blog Home</a>
                 <a class="dropdown-item" href="blog-single.html">Blog Details</a>
               </div>
             </li>
